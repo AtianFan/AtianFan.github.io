@@ -3,15 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>rpc和Message Queue的选择 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="大部分情况下，“给定场景下应该使用这两个产品中哪个”这个问题，大家都会容易决定，而且不需要多少讨论。 我为什么要拿出来讨论一下：  一些场景会比较模糊，觉得都可以使用。这时需要知道产品缺点，而不是看到优势。 一些新人会觉得产品功能是可以替换的，要给说明一下。这里简单说一下两者的区别。  系统结构 RPC系统结构：  Consumer &amp;lt;=&amp;gt; Provider即Consumer调用的Pr">
+<meta name="keywords" content="rpc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rpc和Message Queue的选择">
+<meta property="og:url" content="http://yoursite.com/2018/11/12/rpc和Message-Queue的选择/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="大部分情况下，“给定场景下应该使用这两个产品中哪个”这个问题，大家都会容易决定，而且不需要多少讨论。 我为什么要拿出来讨论一下：  一些场景会比较模糊，觉得都可以使用。这时需要知道产品缺点，而不是看到优势。 一些新人会觉得产品功能是可以替换的，要给说明一下。这里简单说一下两者的区别。  系统结构 RPC系统结构：  Consumer &amp;lt;=&amp;gt; Provider即Consumer调用的Pr">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-12T11:56:50.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="rpc和Message Queue的选择">
+<meta name="twitter:description" content="大部分情况下，“给定场景下应该使用这两个产品中哪个”这个问题，大家都会容易决定，而且不需要多少讨论。 我为什么要拿出来讨论一下：  一些场景会比较模糊，觉得都可以使用。这时需要知道产品缺点，而不是看到优势。 一些新人会觉得产品功能是可以替换的，要给说明一下。这里简单说一下两者的区别。  系统结构 RPC系统结构：  Consumer &amp;lt;=&amp;gt; Provider即Consumer调用的Pr">
   
   
     <link rel="icon" href="/favicon.png">
@@ -139,9 +144,7 @@
   
 </aside>
         
-        <section id="main">
-  
-    <article id="post-rpc和Message-Queue的选择" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-rpc和Message-Queue的选择" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/12/rpc和Message-Queue的选择/" class="article-date">
   <time datetime="2018-11-12T11:56:21.000Z" itemprop="datePublished">2018-11-12</time>
@@ -154,8 +157,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/12/rpc和Message-Queue的选择/">rpc和Message Queue的选择</a>
+    <h1 class="article-title" itemprop="name">
+      rpc和Message Queue的选择
     </h1>
   
 
@@ -228,92 +231,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-text" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/12/hello-text/" class="article-date">
-  <time datetime="2018-11-12T11:33:06.594Z" itemprop="datePublished">2018-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/12/hello-text/">Hello Text</a>
-    </h1>
+    <a href="/2018/11/12/hello-text/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello Text</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/12/hello-text/" data-id="cjoe964u30000kol5pfaq27z0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/12/hello-world/" class="article-date">
-  <time datetime="2018-11-12T11:02:31.928Z" itemprop="datePublished">2018-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/12/hello-world/" data-id="cjoe964uc0001kol5h2g8szj7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
       </div>
